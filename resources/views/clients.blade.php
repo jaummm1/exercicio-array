@@ -7,12 +7,10 @@
     <title>nomes</title>
 </head>
 <body>
-    <ul>
         @foreach ($names as $name)
             <h2>
                 {{ $name->name }} 
             </h2>
         @endforeach
-    </ul>
 </body>
 </html>
