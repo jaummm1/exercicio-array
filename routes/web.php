@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/names', [NameController::class, 'index']);
+Route::get('/names/{names}', [NameController::class, 'index']);
 Route::get('/names/create', [NameController::class, 'create']);
 Route::post('/names/store', [NameController::class, 'store']);
 Route::get('/names/show/{name}', [NameController::class, 'show']);
