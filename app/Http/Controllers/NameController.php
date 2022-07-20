@@ -42,8 +42,18 @@ class NameController extends Controller
 
     public function store(Request $request)
     {
-        $path = $request->image1->store('public/images/file1.jpg');
-        $path = $request->image2->store('public/images/file2.jpg');
+        $request->file->getMimeType();
+        
+        // Retorna o nome original do arquivo
+        $request->file->getClientOriginalName() ;
+        
+        // Extensão do arquivo
+        $name = $request->file->getClientOriginalExtension();
+        $extension = $request->file->extension();
+
+        $nameFile = "{$name}.{$extension}";
+
+        $path = $request->file->storeAs('public/documents', $nameFile);
 
         return view('ex.create', compact('path'));
     }

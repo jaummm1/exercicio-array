@@ -27,6 +27,6 @@ Route::post('/names/update/{name}', [NameController::class, 'update']);
 Route::post('/names/delete/{name}', [NameController::class, 'destroy']);
 
 
-Route::get('/images/create', [NameController::class, 'create']);
-Route::post('/images', [NameController::class, 'store']);
+Route::get('/document/create', [NameController::class, 'create']);
+Route::post('/document', [NameController::class, 'store']);
 
