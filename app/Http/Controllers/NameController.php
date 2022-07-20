@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Name;
+use App\Models\photo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class NameController extends Controller
 {
@@ -24,27 +26,30 @@ class NameController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        return view('names.create');
-    }
-
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+
+
+    public function create()
+    {
+        return view('ex.create');
+    }
+
     public function store(Request $request)
     {
-        Name::create(
-            [
-                'name' => $request->name
-            ]
-        );
+        Storage::put('public/file.jpg', $request);
 
-        return redirect('/names');
+        return view('ex.create');
     }
+    
+
+    
+
 
     /**
      * Display the specified resource.
