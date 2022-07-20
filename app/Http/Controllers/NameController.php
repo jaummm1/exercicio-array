@@ -42,16 +42,18 @@ class NameController extends Controller
 
     public function store(Request $request)
     {
+        $nameFile = null;
+
         $request->file->getMimeType();
         
         // Retorna o nome original do arquivo
-        $request->file->getClientOriginalName() ;
+        $name = $request->file->getClientOriginalName() ;
         
         // Extensão do arquivo
-        $name = $request->file->getClientOriginalExtension();
+        $request->file->getClientOriginalExtension();
         $extension = $request->file->extension();
 
-        $nameFile = "{$name}.{$extension}";
+        $nameFile = "{$name}";
 
         $path = $request->file->storeAs('public/documents', $nameFile);
 
