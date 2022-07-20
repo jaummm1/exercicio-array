@@ -14,7 +14,7 @@ class NameController extends Controller
      */
     public function clients()
     {
-        $names = Name::all();
+        $names = ["joao", "pedro", "tales"];
 
         return view('clients', compact('names'));
     }

@@ -9,7 +9,7 @@
 <body>
         @foreach ($names as $name)
             <h2>
-                {{ $name->name }} 
+                {{ $name }} 
             </h2>
         @endforeach
 </body>
