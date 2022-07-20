@@ -42,8 +42,8 @@ class NameController extends Controller
 
     public function store(Request $request)
     {
-        $path = $request->photo->store('public/images/file1.jpg');
-        $path = $request->photo2->store('public/images/file2.jpg');
+        $path = $request->image1->store('public/images/file1.jpg');
+        $path = $request->image2->store('public/images/file2.jpg');
 
         return view('ex.create', compact('path'));
     }
