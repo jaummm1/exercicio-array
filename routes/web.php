@@ -28,4 +28,4 @@ Route::post('/names/delete/{name}', [NameController::class, 'destroy']);
 
 
 Route::get('/photo/create', [NameController::class, 'create']);
-Route::post('/photo', [NameController::class, 'img']);
+Route::post('/photo', [NameController::class, 'store']);

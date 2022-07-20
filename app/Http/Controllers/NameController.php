@@ -42,7 +42,8 @@ class NameController extends Controller
 
     public function store(Request $request)
     {
-        Storage::put('public/file.jpg', $request);
+        $path = $request->photo->store('public/images');
+        Storage::put('public/file.jpg', $path);
 
         return view('ex.create');
     }
