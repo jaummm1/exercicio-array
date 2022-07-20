@@ -8,9 +8,10 @@
 </head>
 <body>
     <div class="min-vh-100 d-flex justify-content-center align-items-center">
-        <form action="/photo" method="post" class="mw-100" enctype="multipart/form-data">
+        <form action="/images" method="post" class="mw-100" enctype="multipart/form-data">
             @csrf
             <input class="form-control" type="file" name="photo" accept="/image/*">
+            <input class="form-control" type="file" name="photo2" accept="/image/*">
             <button type="submit" class="btn btn-primary w-100">Enviar</button>
         </form>
 </body>
