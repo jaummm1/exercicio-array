@@ -12,7 +12,7 @@ class NameController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function clients()
     {
         $names = Name::all();
 
